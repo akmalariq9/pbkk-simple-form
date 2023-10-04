@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         .container {
             text-align: center;
             flex-grow: 1;
@@ -22,34 +24,56 @@
             justify-content: center;
             align-items: center;
         }
+
         .display-4 {
             font-size: 3rem;
             font-weight: bold;
         }
-        .btn-cta {
-            font-size: 1rem;
-            padding: 10px 20px;
-            background-color: #000;
-            color: #fff;
-            border: none; /* Menghilangkan border */
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
         }
+
+        .btn-cta {
+            margin: 0 10px;
+            background-color: #000;
+            color: white;
+        }
+
+        .content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
         .footer {
             background-color: #000;
             color: #fff;
             padding: 20px 0;
             text-align: center;
         }
-        /* Menghilangkan efek hover Bootstrap */
+
         .btn-cta:hover {
-            background-color: #000;
-            color: #fff;
+            /* Tidak ada perubahan pada hover */
+            background-color: blue;
+            color: white;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
+    <div class="content">
         <h1 class="display-4">Hi There, Welcome! 👋👋</h1>
-        <a href="{{ route('form') }}" class="btn btn-primary btn-cta mt-4">Isi Form</a>
+        <div class="btn-group">
+            <a href="{{ route('form') }}" class="btn btn-cta">Isi Form</a>
+            <a href="{{ route('data.index') }}" class="btn btn-cta">Lihat Data</a>
+        </div>
     </div>
 
     <footer class="footer">
@@ -59,4 +83,5 @@
     <!-- Tambahkan script Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
